@@ -1,0 +1,13 @@
+import { createRoot } from 'react-dom/client'
+import App from './App.tsx'
+import './index.css'
+import { CartProvider } from '@/contexts/CartContext'
+
+// Set dark mode as default
+document.documentElement.classList.add('dark');
+
+createRoot(document.getElementById("root")!).render(
+  <CartProvider>
+    <App />
+  </CartProvider>
+);
